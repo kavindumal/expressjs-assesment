@@ -8,6 +8,7 @@ export async function addCustomer(customer: Customer): Promise<void> {
         data: {
             id: customer.id!,
             name: customer.name!,
+
             email: customer.email!,
             phone: customer.phone!
         }
