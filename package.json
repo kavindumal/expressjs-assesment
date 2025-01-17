@@ -1,0 +1,33 @@
+{
+  "name": "react-express-assesment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kavindumal/expressjs-assesment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kavindumal/expressjs-assesment/issues"
+  },
+  "homepage": "https://github.com/kavindumal/expressjs-assesment#readme",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^6.2.1",
+    "@types/express": "^5.0.0",
+    "express": "^4.21.2",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "prisma": "^6.2.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
