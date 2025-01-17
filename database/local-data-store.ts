@@ -6,8 +6,11 @@ export function addCustomer(customer: Customer): void {
     customers.push(customer);
 }
 
-export function deleteCustomer() {
-    customers = customers.filter((customer: Customer):boolean => customer.id != customer.id);
+export function deleteCustomer(id: number): void {
+    const index = customers.findIndex((customer: Customer) => customer.id === id);
+    if (index !== -1) {
+        customers.splice(index, 1);
+    }
 }
 
 export function updateCustomer(id: number,cus: Customer) {
