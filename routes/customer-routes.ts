@@ -1,9 +1,16 @@
 import express from "express";
+import {addCustomer, getCustomers} from "../database/local-data-store";
+import {Customer} from "../model/customer";
 
 const  router = express.Router();
 
+router.use(express.json());
+
 router.post('/add', (req, res) => {
-    res.status(200).send('Add Customer');
+    console.log(req.body.name);
+    const newCustomer : Customer = req.body;
+    addCustomer(newCustomer);
+    res.send('Customer added successfully');
 })
 
 router.put('/update', (req, res) => {
@@ -15,7 +22,8 @@ router.delete('/delete', (req, res) => {
 })
 
 router.get('/view', (req, res) => {
-    res.status(200).send('Get Customer');
+    const customers = getCustomers();
+    res.json(customers)
 });
 
 export default router;
